@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <title>Desafio Front-End</title>
+
+        <link rel="dns-prefetch" href="http://maps.googleapis.com" />
+        <link rel="dns-prefetch" href="http://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="http://s.w.org" />
+        <link rel="alternate" type="application/rss+xml" title="Desafio Front-End" />
+        <link rel="alternate" type="application/rss+xml" title="Desafio Front-End" />
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900|Nunito:300,400,600,700,900" rel="stylesheet" />
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <div class="topo">
+                <div class="container">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo - Conta Azul" /></a>
+                </div><!-- .container -->
+            </div><!-- .topo -->
+        </header>
+        
+        <div class="container">
+            <section class="cadastrar">
+                <a href="#cadastro">Novo Carro</a>
+            </section><!-- .cadastrar -->
+        </div><!-- .container -->
+
+        <section id="cadastro">
+            <div class="container">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Dados do Carro</div>
+                    <div class="panel-body">
+                        <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+                            <div class="form-group">
+                                <label for="placa">Placa</label>
+                                <input type="text" id="add-name" placeholder="Novo carro">
+                            </div><!-- .form-group -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-lg btn-primary">
+                                    Adicionar Carro
+                                </button>
+                            </div><!-- .form-group -->
+                        </form>
+                    </div><!-- .panel-body -->
+                </div><!-- .panel -->
+            </div><!-- .container -->
+        </section><!-- #cadastro -->
+
+        <div id="spoiler" role="aria-hidden">
+            <form action="javascript:void(0);" method="POST" id="saveEdit">
+                <input type="text" id="edit-name">
+                <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+            </form>
+        </div>
+        
+        <section class="listagem">
+            <div class="container">
+            <div id="demo"></div>
+                <table id="carroTable" class="table">
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carros">
+
+                    </tbody>
+                </table>
+
+                <p id="counter"></p>
+            </div><!-- .container -->
+        </section><!-- .listagem -->
+
+        <script src="js/jquery-2.2.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
